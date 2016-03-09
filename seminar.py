@@ -16,7 +16,7 @@ def hello_world():
         if ':' in srvr:
             srvr = srvr[:srvr.index(':')]
         dct[addr] = 'http://%s:%d' % (srvr, cid)
-    return redirect(dct[addr])
+    return redirect(dct[addr], 302)
 
 if __name__ == '__main__':
     #app.debug = True
